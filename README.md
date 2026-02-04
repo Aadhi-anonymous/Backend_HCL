@@ -1,5 +1,6 @@
 ## Backend and Frontend both hosted on AWS - 
 ## Frontend url -> http://98.93.22.240:3000/
+(not recommended to try in college wifi's etc.., which is expected to block this)
 ## Demo Video link -> https://drive.google.com/file/d/1O3EtxnX2slYMS1oXDgtYYMPuHg-uOqKs/view
 
 # Customer Spend Prediction Service
