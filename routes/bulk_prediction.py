@@ -39,12 +39,12 @@ def get_file_metadata(file_path, df):
     
     return {
         'filename': os.path.basename(file_path),
-        'file_size_bytes': file_size,
-        'file_size_mb': round(file_size / (1024 * 1024), 2),
-        'total_rows': len(df),
-        'total_customers': df.iloc[:, 0].nunique(),  # First column is customer_id
+        'file_size_bytes': int(file_size),
+        'file_size_mb': round(float(file_size / (1024 * 1024)), 2),
+        'total_rows': int(len(df)),
+        'total_customers': int(df.iloc[:, 0].nunique()),  # First column is customer_id
         'columns': list(df.columns),
-        'has_duplicates': df.iloc[:, 0].duplicated().any()
+        'has_duplicates': bool(df.iloc[:, 0].duplicated().any())  # Convert numpy.bool_ to Python bool
     }
 
 
@@ -256,10 +256,10 @@ def process_bulk_predictions(job_id):
             total_spends = [r['predicted_30d_spend']['total'] for r in successful_results]
             
             job['statistics'] = {
-                'total_predicted_spend': sum(total_spends),
-                'average_predicted_spend': sum(total_spends) / len(total_spends),
-                'min_predicted_spend': min(total_spends),
-                'max_predicted_spend': max(total_spends),
+                'total_predicted_spend': round(float(sum(total_spends)), 2),
+                'average_predicted_spend': round(float(sum(total_spends) / len(total_spends)), 2),
+                'min_predicted_spend': round(float(min(total_spends)), 2),
+                'max_predicted_spend': round(float(max(total_spends)), 2),
                 'currency': 'INR'
             }
         
@@ -305,11 +305,11 @@ def get_bulk_status(job_id):
         'job_id': job['job_id'],
         'status': job['status'],
         'progress': {
-            'total': job['total_customers'],
-            'processed': job['processed_customers'],
-            'successful': job['successful_predictions'],
-            'failed': job['failed_predictions'],
-            'percentage': round((job['processed_customers'] / job['total_customers']) * 100, 2) if job['total_customers'] > 0 else 0
+            'total': int(job['total_customers']),
+            'processed': int(job['processed_customers']),
+            'successful': int(job['successful_predictions']),
+            'failed': int(job['failed_predictions']),
+            'percentage': round(float((job['processed_customers'] / job['total_customers']) * 100), 2) if job['total_customers'] > 0 else 0.0
         },
         'metadata': job['metadata'],
         'created_at': job['created_at'],
@@ -407,17 +407,17 @@ def list_bulk_jobs():
             'status': job['status'],
             'metadata': job['metadata'],
             'progress': {
-                'total': job['total_customers'],
-                'processed': job['processed_customers'],
-                'successful': job['successful_predictions'],
-                'failed': job['failed_predictions']
+                'total': int(job['total_customers']),
+                'processed': int(job['processed_customers']),
+                'successful': int(job['successful_predictions']),
+                'failed': int(job['failed_predictions'])
             },
             'created_at': job['created_at'],
             'updated_at': job['updated_at']
         })
     
     return jsonify({
-        'total': len(response_jobs),
+        'total': int(len(response_jobs)),
         'jobs': response_jobs
     }), 200
 

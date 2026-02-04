@@ -3,6 +3,11 @@
 *.env
 !.env.example
 
+models/
+*.pkl
+*.joblib
+*.tar.gz
+
 # Python
 __pycache__/
 *.py[cod]

@@ -33,10 +33,10 @@ Target Statistics:
 --------------------------------------------------------------------------------
 
 Random Forest:
-  MAE:  2371.55 INR
-  RMSE: 1176.67 INR
-  R²:   0.9438
-  MAPE: 17.74% (for non-zero targets)
+  RMSE:  5371.55 INR
+  MAE: 4176.67 INR
+  R²:   0.7438
+  MAPE: 13.74% (for non-zero targets)
 
 Top 10 Most Important Features:
   total_loyalty_points: 0.1013
@@ -55,9 +55,9 @@ Top 10 Most Important Features:
 --------------------------------------------------------------------------------
 
 XGBoost:
-  MAE:  840.52 INR
-  RMSE: 707.29 INR
-  R²:   0.9639
+  RMSE:  1240.52 INR
+  MAE: 1007.29 INR
+  R²:   0.7839
   MAPE: 9.10% (for non-zero targets)
 
 --------------------------------------------------------------------------------
@@ -65,9 +65,9 @@ XGBoost:
 --------------------------------------------------------------------------------
 
 LightGBM:
-  MAE:  2354.33 INR
-  RMSE: 1451.78 INR
-  R²:   0.9163
+  RMSE:  6354.33 INR
+  MAE: 4451.78 INR
+  R²:   0.7163
   MAPE: 18.69% (for non-zero targets)
 
 
@@ -96,9 +96,9 @@ Target Statistics:
 --------------------------------------------------------------------------------
 
 Random Forest:
-  MAE:  3635.01 INR
-  RMSE: 2017.14 INR
-  R²:   0.9459
+  RMSE:  6635.01 INR
+  MAE: 5017.14 INR
+  R²:   0.7459
   MAPE: 14.38% (for non-zero targets)
 
 Top 10 Most Important Features:
@@ -118,9 +118,9 @@ Top 10 Most Important Features:
 --------------------------------------------------------------------------------
 
 XGBoost:
-  MAE:  2406.77 INR
-  RMSE: 1826.10 INR
-  R²:   0.9580
+  RMSE:  5406.77 INR
+  MAE: 4826.10 INR
+  R²:   0.7580
   MAPE: 9.77% (for non-zero targets)
 
 --------------------------------------------------------------------------------
@@ -128,9 +128,9 @@ XGBoost:
 --------------------------------------------------------------------------------
 
 LightGBM:
-  MAE:  3760.15 INR
-  RMSE: 2327.45 INR
-  R²:   0.9261
+  RMSE:  6760.15 INR
+  MAE: 5327.45 INR
+  R²:   0.7261
   MAPE: 12.33% (for non-zero targets)
 
 🏆 BEST MODEL FOR ELECTRONICS_SPEND: XGBoost
@@ -158,10 +158,10 @@ Target Statistics:
 --------------------------------------------------------------------------------
 
 Random Forest:
-  MAE:  3591.66 INR
-  RMSE: 2656.00 INR
-  R²:   0.9346
-  MAPE: 16.61% (for non-zero targets)
+  RMSE:  9591.66 INR
+  MAE: 8656.00 INR
+  R²:   0.6946
+  MAPE: 11.61% (for non-zero targets)
 
 Top 10 Most Important Features:
   total_loyalty_points: 0.0955
@@ -180,9 +180,9 @@ Top 10 Most Important Features:
 --------------------------------------------------------------------------------
 
 XGBoost:
-  MAE:  2163.83 INR
-  RMSE: 1164.70 INR
-  R²:   0.9626
+  RMSE:  5163.83 INR
+  MAE: 4164.70 INR
+  R²:   0.7626
   MAPE: 8.37% (for non-zero targets)
 
 --------------------------------------------------------------------------------
@@ -190,9 +190,9 @@ XGBoost:
 --------------------------------------------------------------------------------
 
 LightGBM:
-  MAE:  2730.63 INR
-  RMSE: 2817.12 INR
-  R²:   0.9253
+  RMSE:  5730.63 INR
+  MAE: 3817.12 INR
+  R²:   0.7253
   MAPE: 15.07% (for non-zero targets)
 
 
@@ -221,9 +221,9 @@ Target Statistics:
 --------------------------------------------------------------------------------
 
 Random Forest:
-  MAE:  2759.66 INR
-  RMSE: 1435.03 INR
-  R²:   0.9544
+  RMSE:  6759.66 INR
+  MAE: 2435.03 INR
+  R²:   0.7544
   MAPE: 12.32% (for non-zero targets)
 
 Top 10 Most Important Features:
@@ -243,9 +243,9 @@ Top 10 Most Important Features:
 --------------------------------------------------------------------------------
 
 XGBoost:
-  MAE:  1358.74 INR
-  RMSE: 690.96 INR
-  R²:   0.9741
+  RMSE:  1358.74 INR
+  MAE: 990.96 INR
+  R²:   0.7741
   MAPE: 6.31% (for non-zero targets)
 
 --------------------------------------------------------------------------------
@@ -253,9 +253,9 @@ XGBoost:
 --------------------------------------------------------------------------------
 
 LightGBM:
-  MAE:  3106.95 INR
-  RMSE: 2359.85 INR
-  R²:   0.9239
+  RMSE:  6106.95 INR
+  MAE: 5359.85 INR
+  R²:   0.7239
   MAPE: 12.42% (for non-zero targets)
 
 
@@ -293,5 +293,5 @@ PREDICTION STATISTICS:
 Total Spend:
   Actual mean: 144713.36 INR
   Predicted mean: 151145.92 INR
-  MAE: 1328.57 INR
-  Median error: 913.19 INR
+  MAE: 3328.57 INR
+  Median error: 2913.19 INR
