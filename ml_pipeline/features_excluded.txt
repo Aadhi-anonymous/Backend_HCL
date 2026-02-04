@@ -1,0 +1,19 @@
+FEATURES EXPLICITLY EXCLUDED
+======================================================================
+
+✗ customer_id
+✗ cutoff_date
+✗ loyalty_status
+✗ segment_id
+✗ target_30d_total_spend
+✗ target_30d_electronics_spend
+✗ target_30d_grocery_spend
+✗ target_30d_sports_spend
+✗ target_30d_transaction_count
+
+REASONS:
+- customer_id: Identifier with no predictive value
+- cutoff_date: Already used to calculate time-based features
+- loyalty_status: Encoded as loyalty_status_encoded
+- segment_id: Encoded as segment_id_encoded
+- target_* columns: Target variables (would cause data leakage)

@@ -1,0 +1,55 @@
+FEATURES USED FOR TRAINING
+======================================================================
+
+TOTAL FEATURES: 74
+
+RECENCY FEATURES (3):
+  - days_since_last_transaction
+  - days_since_first_transaction
+  - avg_days_between_transactions
+
+FREQUENCY FEATURES (7):
+  - transaction_count_7d
+  - transaction_count_30d
+  - transaction_count_90d
+  - promotion_usage_count
+  - txn_count_electronics
+  - txn_count_grocery
+  - txn_count_sports
+
+MONETARY FEATURES (8):
+  - total_spend_7d
+  - total_spend_30d
+  - total_spend_90d
+  - lifetime_spend
+  - spend_30d_electronics
+  - spend_30d_grocery
+  - spend_30d_sports
+  - spend_velocity
+
+DIVERSITY FEATURES (3):
+  - num_distinct_products
+  - num_distinct_categories
+  - num_distinct_stores
+
+CATEGORY-SPECIFIC FEATURES (9):
+  - spend_30d_electronics
+  - spend_30d_grocery
+  - spend_30d_sports
+  - txn_count_electronics
+  - txn_count_grocery
+  - txn_count_sports
+  - favorite_category_electronics
+  - favorite_category_grocery
+  - favorite_category_sports
+
+BEHAVIORAL FEATURES (9):
+  - total_items_purchased
+  - avg_items_per_transaction
+  - max_items_in_transaction
+  - promotion_usage_count
+  - promotion_usage_rate
+  - purchase_momentum
+  - spend_velocity
+  - most_common_day_of_week
+  - weekend_transaction_rate
