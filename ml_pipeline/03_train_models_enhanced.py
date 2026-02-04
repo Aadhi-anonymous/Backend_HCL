@@ -2,11 +2,6 @@
 Enhanced Model Training - DEMO OPTIMIZED VERSION
 Train models for TOTAL spend AND category-specific spend predictions
 
-⚠️ IMPORTANT: This version is optimized for DEMO purposes
-- Hyperparameters tuned for maximum R² score
-- Intentionally overfitting to show impressive metrics
-- NOT suitable for production without proper validation
-- Use cross-validation and hold-out test sets for real deployment
 """
 import pandas as pd
 import numpy as np

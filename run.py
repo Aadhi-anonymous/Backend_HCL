@@ -6,18 +6,23 @@ from app import create_app
 from config import Config
 
 if __name__ == "__main__":
-    print("=" * 50)
-    print("🚀 Starting Flask Application")
-    print("=" * 50)
+    print("=" * 60)
+    print("🚀 Starting Customer Spend Prediction Service")
+    print("=" * 60)
     
     try:
         app = create_app()
         
         print(f"\n🔗 Server running at: http://localhost:{Config.PORT}")
-        print(f"📍 Health check: http://localhost:{Config.PORT}/")
-        print(f"🔍 DB test: http://localhost:{Config.PORT}/test/db")
-        print(f"📊 Test API: http://localhost:{Config.PORT}/test")
-        print("-" * 50)
+        print(f"📍 API Info: http://localhost:{Config.PORT}/")
+        print(f"💚 Health Check: http://localhost:{Config.PORT}/health")
+        print(f"🔮 Prediction: http://localhost:{Config.PORT}/predict (POST)")
+        print("-" * 60)
+        print(f"\n🧪 Example curl command:")
+        print(f'   curl -X POST http://localhost:{Config.PORT}/predict \\')
+        print(f'        -H "Content-Type: application/json" \\')
+        print(f'        -d \'{{"customer_id": "CUST_001"}}\'')
+        print("-" * 60)
         
         app.run(
             host="0.0.0.0",
