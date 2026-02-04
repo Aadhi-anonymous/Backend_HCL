@@ -1,3 +1,7 @@
+## Backend and Frontend both hosted on AWS - 
+## Frontend url -> http://98.93.22.240:3000/
+## Demo Video link -> https://drive.google.com/file/d/1O3EtxnX2slYMS1oXDgtYYMPuHg-uOqKs/view
+
 # Customer Spend Prediction Service
 
 Complete Flask backend with ML pipeline for predicting customer 30-day spend with category breakdowns.
